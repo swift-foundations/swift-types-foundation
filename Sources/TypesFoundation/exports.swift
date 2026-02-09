@@ -9,8 +9,8 @@
 @_exported import CasePaths
 @_exported import DateParsing
 @_exported import Dependencies
-@_exported import Domain
-@_exported import EmailAddress
+@_exported import Domain_Standard
+@_exported import EmailAddress_Standard
 @_exported import Foundation
 @_exported import FoundationExtensions
 @_exported import IssueReporting
