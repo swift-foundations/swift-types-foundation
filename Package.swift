@@ -103,7 +103,7 @@ let package = Package(
 // Workaround for SPM trait propagation bug in Swift 6.1-6.2
 // Explicitly include transitive conditional dependencies that are not already declared
 package.dependencies.append(contentsOf: [
-    .package(url: "https://github.com/swift-standards/swift-rfc-7578", from: "0.2.1")
+    .package(url: "https://github.com/swift-ietf/swift-rfc-7578", from: "0.2.1")
 ])
 #endif
 
