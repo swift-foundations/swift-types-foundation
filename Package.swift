@@ -56,17 +56,17 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/swift-primitives/swift-standard-library-extensions.git", branch: "main"),
         .package(url: "https://github.com/swift-foundations/swift-date-parsing.git", branch: "main"),
-        .package(url: "https://github.com/swift-standards/swift-domain-standard", from: "0.2.0"),
-        .package(url: "https://github.com/swift-standards/swift-emailaddress-standard", from: "0.3.0"),
+        .package(url: "https://github.com/swift-standards/swift-domain-standard.git", from: "0.2.0"),
+        .package(url: "https://github.com/swift-standards/swift-emailaddress-standard.git", from: "0.3.0"),
         .package(url: "https://github.com/swift-foundations/swift-foundation-extensions.git", branch: "main"),
         .package(url: "https://github.com/swift-foundations/swift-translating.git", branch: "main"),
         .package(url: "https://github.com/swift-foundations/swift-form-coding.git", branch: "main"),
         .package(url: "https://github.com/swift-foundations/swift-url-routing-translating.git", branch: "main"),
-        .package(url: "https://github.com/pointfreeco/swift-case-paths", from: "1.5.6"),
+        .package(url: "https://github.com/pointfreeco/swift-case-paths.git", from: "1.5.6"),
         .package(url: "https://github.com/swift-foundations/swift-dependencies.git", branch: "main"),
-        .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "1.4.3"),
-        .package(url: "https://github.com/pointfreeco/swift-url-routing", from: "0.6.2"),
-        .package(url: "https://github.com/pointfreeco/swift-tagged", from: "0.9.0")
+        .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay.git", from: "1.4.3"),
+        .package(url: "https://github.com/pointfreeco/swift-url-routing.git", from: "0.6.2"),
+        .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.9.0")
     ],
     targets: [
         .target(
@@ -103,7 +103,7 @@ let package = Package(
 // Workaround for SPM trait propagation bug in Swift 6.1-6.2
 // Explicitly include transitive conditional dependencies that are not already declared
 package.dependencies.append(contentsOf: [
-    .package(url: "https://github.com/swift-ietf/swift-rfc-7578", from: "0.2.1")
+    .package(url: "https://github.com/swift-ietf/swift-rfc-7578.git", from: "0.2.1")
 ])
 #endif
 
