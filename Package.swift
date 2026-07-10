@@ -28,8 +28,6 @@ extension Target.Dependency {
             package: "swift-form-coding"
         )
     }
-    static var dateParsing: Self { .product(name: "DateParsing", package: "swift-date-parsing") }
-    static var unixEpochParsing: Self { .product(name: "UnixEpochParsing", package: "swift-date-parsing") }
     static var tagged: Self { .product(name: "Tagged", package: "swift-tagged") }
 }
 
@@ -55,7 +53,6 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/swift-primitives/swift-standard-library-extensions.git", branch: "main"),
-        .package(url: "https://github.com/swift-foundations/swift-date-parsing.git", branch: "main"),
         .package(url: "https://github.com/swift-standards/swift-domain-standard.git", branch: "main"),
         .package(url: "https://github.com/swift-standards/swift-emailaddress-standard.git", branch: "main"),
         .package(url: "https://github.com/swift-foundations/swift-foundation-extensions.git", branch: "main"),
@@ -65,7 +62,7 @@ let package = Package(
         .package(url: "https://github.com/pointfreeco/swift-case-paths.git", from: "1.5.6"),
         .package(url: "https://github.com/swift-foundations/swift-dependencies.git", branch: "main"),
         .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay.git", from: "1.4.3"),
-        .package(url: "https://github.com/swift-foundations/swift-url-routing.git", branch: "main"),
+        .package(url: "https://github.com/swift-foundations/swift-url-routing.git", from: "0.6.0"),  // Institute fork URL (principal ruling 2026-07-09); pinned to upstream-identical tags (0.6.2 = pointfree release SHA); do NOT use branch:main until the RFC-first rewrite lands via the routing arc.
         .package(url: "https://github.com/pointfreeco/swift-tagged.git", from: "0.9.0")
     ],
     targets: [
@@ -82,8 +79,6 @@ let package = Package(
                 .urlRoutingTranslating,
                 .emailAddress,
                 .domain,
-                .dateParsing,
-                .unixEpochParsing,
                 .formCoding,
                 .tagged
             ]

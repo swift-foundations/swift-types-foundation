@@ -23,7 +23,7 @@ struct ReadmeVerificationTests {
         let _: EmailAddress.Type = EmailAddress.self
         let _: _Domain.Type = _Domain.self
 
-        // DateParsing doesn't export a primary type, but we can verify Foundation is available
+        // Foundation is available through TypesFoundation's @_exported import
         let _: Date.Type = Date.self
 
         // URLRouting is available

@@ -7,7 +7,6 @@
 
 @_exported import Standard_Library_Extensions
 @_exported import CasePaths
-@_exported import DateParsing
 @_exported import Dependencies
 @_exported import Domain_Standard
 @_exported import EmailAddress_Standard
