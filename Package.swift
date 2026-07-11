@@ -19,7 +19,6 @@ extension Target.Dependency {
     static var dependenciesTestSupport: Self { .product(name: "Dependencies Test Support", package: "swift-dependencies") }
     static var foundationExtensions: Self { .product(name: "FoundationExtensions", package: "swift-foundation-extensions") }
     static var translating: Self { .product(name: "Translating", package: "swift-translating") }
-    static var issueReporting: Self { .product(name: "IssueReporting", package: "xctest-dynamic-overlay") }
     static var urlRouting: Self { .product(name: "URLRouting", package: "swift-url-routing") }
     static var urlRoutingTranslating: Self { .product(name: "URLRoutingTranslating", package: "swift-url-routing-translating") }
     static var formCoding: Self {
@@ -61,7 +60,6 @@ let package = Package(
         .package(url: "https://github.com/swift-foundations/swift-url-routing-translating.git", branch: "main"),
         .package(url: "https://github.com/pointfreeco/swift-case-paths.git", from: "1.5.6"),
         .package(url: "https://github.com/swift-foundations/swift-dependencies.git", branch: "main"),
-        .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay.git", from: "1.4.3"),
         .package(url: "https://github.com/swift-foundations/swift-url-routing.git", from: "0.6.0"),  // Institute fork URL (principal ruling 2026-07-09); pinned to upstream-identical tags (0.6.2 = pointfree release SHA); do NOT use branch:main until the RFC-first rewrite lands via the routing arc.
         .package(url: "https://github.com/swift-primitives/swift-tagged-primitives.git", branch: "main")
     ],
@@ -74,7 +72,6 @@ let package = Package(
                 .dependencies,
                 .foundationExtensions,
                 .translating,
-                .issueReporting,
                 .urlRouting,
                 .urlRoutingTranslating,
                 .emailAddress,

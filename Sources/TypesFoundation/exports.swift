@@ -12,7 +12,6 @@
 @_exported import EmailAddress_Standard
 @_exported import Foundation
 @_exported import FoundationExtensions
-@_exported import IssueReporting
 @_exported import Tagged_Primitives
 @_exported import Translating
 @_exported import URLFormCoding
