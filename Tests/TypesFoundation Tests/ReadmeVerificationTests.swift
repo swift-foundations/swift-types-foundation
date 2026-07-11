@@ -21,7 +21,7 @@ struct ReadmeVerificationTests {
 
         // Verify the imports are accessible by using types from each package
         let _: EmailAddress.Type = EmailAddress.self
-        let _: _Domain.Type = _Domain.self
+        let _: Domain.Type = Domain.self
 
         // Foundation is available through TypesFoundation's @_exported import
         let _: Date.Type = Date.self
@@ -34,7 +34,7 @@ struct ReadmeVerificationTests {
 
         // Builders is imported but doesn't have a primary type to check
         // Dependencies is imported
-        let _: Dependencies.DependencyValues.Type = Dependencies.DependencyValues.self
+        let _: __DependencyValues.Type = __DependencyValues.self
     }
 
     @Test("Quick Start - Consolidated Import (README lines 94-102)")
@@ -46,7 +46,7 @@ struct ReadmeVerificationTests {
         #expect(email.rawValue == "user@example.com")
 
         // Create domain
-        let domain = try _Domain("example.com")
+        let domain = try Domain("example.com")
         #expect(domain.name == "example.com")
 
         // Date arithmetic with FoundationExtensions
@@ -76,7 +76,7 @@ struct ReadmeVerificationTests {
         // This is a compile-time check - if TypesFoundation imports work, the package is set up correctly
         // We verify this by checking that core types from the package are accessible
         let _: EmailAddress.Type = EmailAddress.self
-        let _: _Domain.Type = _Domain.self
+        let _: Domain.Type = Domain.self
     }
 
     @Test("Installation - Target Dependency (README lines 69-76)")
@@ -84,6 +84,6 @@ struct ReadmeVerificationTests {
         // Verify the product name "TypesFoundation" is correct
         // This is verified by the fact that we can import TypesFoundation and use its types
         let _: EmailAddress.Type = EmailAddress.self
-        let _: _Domain.Type = _Domain.self
+        let _: Domain.Type = Domain.self
     }
 }
