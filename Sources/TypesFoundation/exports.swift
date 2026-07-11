@@ -13,7 +13,7 @@
 @_exported import Foundation
 @_exported import FoundationExtensions
 @_exported import IssueReporting
-@_exported import Tagged
+@_exported import Tagged_Primitives
 @_exported import Translating
 @_exported import URLFormCoding
 
