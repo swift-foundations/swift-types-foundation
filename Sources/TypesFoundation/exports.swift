@@ -15,6 +15,16 @@
 //  inventory execute this shell's removal. Do NOT add surface here.
 //
 
+// W-3-STUB LOAD-BEARING LINKAGE (not re-exported; do not delete before the APP
+// CUTOVER): the app's modules reach extension members of these two modules via
+// transitive linkage of this target (pre-MemberImportVisibility member lookup —
+// oracle-verified 2026-07-13: dropping them broke app-internal WaitingList
+// `.cases`). Plain imports restore the exact pre-thin visibility (linked, NOT
+// @_exported). These edges dissolve only when the app's own imports are fixed
+// (E-4 / W3 app-cutover), not at this shell's C10 removal alone.
+import URLRouting
+import URLRoutingTranslating
+
 @_exported import Standard_Library_Extensions
 @_exported import Dependencies
 @_exported import Domain_Standard
