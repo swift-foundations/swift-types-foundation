@@ -10,11 +10,11 @@ import Testing
 
 @testable import TypesFoundation
 
-@Suite("README Code Examples Validation", .serialized)
-struct ReadmeVerificationTests {
+@Suite( .serialized
+struct Test {
 
-    @Test("Quick Start - Multiple Imports (README lines 82-90)")
-    func quickStartMultipleImports() throws {
+    @Test
+    func `Quick Start - Multiple Imports (README lines 82-90)`() throws {
         // This test verifies that all the individual package imports mentioned in README
         // are available through TypesFoundation. We don't need to import them separately
         // as they're re-exported through @_exported imports in exports.swift
@@ -37,8 +37,8 @@ struct ReadmeVerificationTests {
         let _: __DependencyValues.Type = __DependencyValues.self
     }
 
-    @Test("Quick Start - Consolidated Import (README lines 94-102)")
-    func quickStartConsolidatedImport() throws {
+    @Test
+    func `Quick Start - Consolidated Import (README lines 94-102)`() throws {
         // Verify that importing TypesFoundation gives access to all functionality
 
         // Create email address
@@ -70,8 +70,8 @@ struct ReadmeVerificationTests {
         // which is beyond the scope of README verification
     }
 
-    @Test("Installation - Package.swift Dependency (README lines 61-65)")
-    func installationPackageSwiftDependency() throws {
+    @Test
+    func `Installation - Package.swift Dependency (README lines 61-65)`() throws {
         // Verify the package name and URL are correct by checking they match Package.swift
         // This is a compile-time check - if TypesFoundation imports work, the package is set up correctly
         // We verify this by checking that core types from the package are accessible
@@ -79,8 +79,8 @@ struct ReadmeVerificationTests {
         let _: Domain.Type = Domain.self
     }
 
-    @Test("Installation - Target Dependency (README lines 69-76)")
-    func installationTargetDependency() throws {
+    @Test
+    func `Installation - Target Dependency (README lines 69-76)`() throws {
         // Verify the product name "TypesFoundation" is correct
         // This is verified by the fact that we can import TypesFoundation and use its types
         let _: EmailAddress.Type = EmailAddress.self
