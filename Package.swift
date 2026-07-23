@@ -21,10 +21,10 @@ extension Target.Dependency {
     // W-3-STUB load-bearing linkage edges (app-transitive member visibility; die at the APP CUTOVER):
     static var urlRouting: Self { .product(name: "URLRouting", package: "swift-url-routing") }
     static var urlRoutingTranslating: Self { .product(name: "URLRoutingTranslating", package: "swift-url-routing-translating") }
-    static var formCoding: Self {
+    static var urlFormCoding: Self {
         .product(
-            name: "FormCoding",
-            package: "swift-form-coding"
+            name: "URLFormCoding",
+            package: "swift-url-form-coding"
         )
     }
     static var tagged: Self { .product(name: "Tagged Primitives", package: "swift-tagged-primitives") }
@@ -50,7 +50,7 @@ let package = Package(
         .package(url: "https://github.com/swift-standards/swift-emailaddress-standard.git", branch: "main"),
         .package(url: "https://github.com/swift-foundations/swift-foundation-extensions.git", branch: "main"),
         .package(url: "https://github.com/swift-foundations/swift-translating.git", branch: "main"),
-        .package(url: "https://github.com/swift-foundations/swift-form-coding.git", branch: "main"),
+        .package(url: "https://github.com/swift-foundations/swift-url-form-coding.git", branch: "main"),
         .package(url: "https://github.com/swift-foundations/swift-dependencies.git", branch: "main"),
         .package(url: "https://github.com/swift-foundations/swift-url-routing.git", branch: "main"),
         .package(url: "https://github.com/swift-foundations/swift-url-routing-translating.git", branch: "main"),
@@ -68,7 +68,7 @@ let package = Package(
                 .urlRoutingTranslating,
                 .emailAddress,
                 .domain,
-                .formCoding,
+                .urlFormCoding,
                 .tagged
             ]
         ),
