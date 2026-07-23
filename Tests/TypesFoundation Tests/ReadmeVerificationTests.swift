@@ -10,7 +10,7 @@ import Testing
 
 @testable import TypesFoundation
 
-@Suite( .serialized
+@Suite(.serialized)
 struct Test {
 
     @Test
